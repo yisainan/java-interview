@@ -146,79 +146,94 @@ Overloaded的方法是可以改变返回值的类型。
 
 </details>
 
-<b><details><summary></summary></b>
+<b><details><summary>16、同步和异步有何异同，在什么情况下分别使用他们？举例说明。</summary></b>
+
+* 如果数据将在线程间共享。例如正在写的数据以后可能被另一个线程读到，或者正在读的数据可能已经被另一个线程写过了，那么这些数据就是共享数据，必须进行同步存取。
+* 当应用程序在对象上调用了一个需要花费很长时间来执行的方法，并且不希望让程序等待方法的返回时，就应该使用异步编程，在很多情况下采用异步途径往往更有效率。
 
 </details>
 
-<b><details><summary></summary></b>
-
-</details>
-
-<b><details><summary></summary></b>
-
-</details>
-
-<b><details><summary></summary></b>
-
-</details>
-
-16、同步和异步有何异同，在什么情况下分别使用他们？举例说明。
-
-如果数据将在线程间共享。例如正在写的数据以后可能被另一个线程读到，或者正在读的数据可能已经被另一个线程写过了，那么这些数据就是共享数据，必须进行同步存取。
-当应用程序在对象上调用了一个需要花费很长时间来执行的方法，并且不希望让程序等待方法的返回时，就应该使用异步编程，在很多情况下采用异步途径往往更有效率。
-
-17、abstract class和interface有什么区别?
+<b><details><summary>17、abstract class和interface有什么区别?</summary></b>
 
 声明方法的存在而不去实现它的类被叫做抽象类（abstract class），它用于要创建一个体现某些基本行为的类，并为该类声明方法，但不能在该类中实现该类的情况。不能创建abstract 类的实例。然而可以创建一个变量，其类型是一个抽象类，并让它指向具体子类的一个实例。不能有抽象构造函数或抽象静态方法。Abstract 类的子类为它们父类中的所有抽象方法提供实现，否则它们也是抽象类为。取而代之，在子类中实现该方法。知道其行为的其它类可以在类中实现这些方法。
+
 接口（interface）是抽象类的变体。在接口中，所有方法都是抽象的。多继承性可通过实现这样的接口而获得。接口中的所有方法都是抽象的，没有一个有程序体。接口只可以定义static final成员变量。接口的实现与子类相似，除了该实现类不能从接口定义中继承行为。当类实现特殊接口时，它定义（即将程序体给予）所有这种接口的方法。然后，它可以在实现了该接口的类的任何对象上调用接口的方法。由于有抽象类，它允许使用接口名作为引用变量的类型。通常的动态联编将生效。引用可以转换到接口类型或从接口类型转换，instanceof 运算符可以用来决定某对象的类是否实现了接口。
 
-18、heap和stack有什么区别。
+</details>
 
-栈是一种线形集合，其添加和删除元素的操作应在同一段完成。栈按照后进先出的方式进行处理。
-堆是栈的一个组成元素
+<b><details><summary>18、heap和stack有什么区别。</summary></b>
 
-19、forward 和redirect的区别
+* 栈是一种线形集合，其添加和删除元素的操作应在同一段完成。栈按照后进先出的方式进行处理。
+* 堆是栈的一个组成元素
 
-forward是服务器请求资源，服务器直接访问目标地址的URL，把那个URL的响应内容读取过来，然后把这些内容再发给浏览器，浏览器根本不知道服务器发送的内容是从哪儿来的，所以它的地址栏中还是原来的地址。
-    redirect就是服务端根据逻辑,发送一个状态码,告诉浏览器重新去请求那个地址，一般来说浏览器会用刚才请求的所有参数重新请求，所以session,request参数都可以获取。
+</details>
 
-20、EJB与JAVA BEAN的区别？
+<b><details><summary>19、forward 和redirect的区别</summary></b>
 
-Java Bean 是可复用的组件，对Java Bean并没有严格的规范，理论上讲，任何一个Java类都可以是一个Bean。但通常情况下，由于Java Bean是被容器所创建（如Tomcat）的，所以Java Bean应具有一个无参的构造器，另外，通常Java Bean还要实现Serializable接口用于实现Bean的持久性。Java Bean实际上相当于微软COM模型中的本地进程内COM组件，它是不能被跨进程访问的。Enterprise Java Bean 相当于DCOM，即分布式组件。它是基于Java的远程方法调用（RMI）技术的，所以EJB可以被远程访问（跨进程、跨计算机）。但EJB必须被布署在诸如Webspere、WebLogic这样的容器中，EJB客户从不直接访问真正的EJB组件，而是通过其容器访问。EJB容器是EJB组件的代理，EJB组件由容器所创建和管理。客户通过容器来访问真正的EJB组件。
+* forward是服务器请求资源，服务器直接访问目标地址的URL，把那个URL的响应内容读取过来，然后把这些内容再发给浏览器，浏览器根本不知道服务器发送的内容是从哪儿来的，所以它的地址栏中还是原来的地址。
+* redirect就是服务端根据逻辑,发送一个状态码,告诉浏览器重新去请求那个地址，一般来说浏览器会用刚才请求的所有参数重新请求，所以session,request参数都可以获取。
 
-21、Static Nested Class 和 Inner Class的不同。 
+</details>
 
+<b><details><summary>20、EJB与JAVA BEAN的区别？</summary></b>
+
+Java Bean 是可复用的组件，对Java Bean并没有严格的规范，理论上讲，任何一个Java类都可以是一个Bean。但通常情况下，由于Java Bean是被容器所创建（如Tomcat）的，所以Java Bean应具有一个无参的构造器，另外，通常Java Bean还要实现Serializable接口用于实现Bean的持久性。Java Bean实际上相当于微软COM模型中的本地进程内COM组件，它是不能被跨进程访问的。
+
+Enterprise Java Bean 相当于DCOM，即分布式组件。它是基于Java的远程方法调用（RMI）技术的，所以EJB可以被远程访问（跨进程、跨计算机）。但EJB必须被布署在诸如Webspere、WebLogic这样的容器中，EJB客户从不直接访问真正的EJB组件，而是通过其容器访问。EJB容器是EJB组件的代理，EJB组件由容器所创建和管理。客户通过容器来访问真正的EJB组件。
+
+</details>
+
+<b><details><summary>21、Static Nested Class 和 Inner Class的不同。</summary></b>
+ 
 Static Nested Class是被声明为静态（static）的内部类，它可以不依赖于外部类实例被实例化。而通常的内部类需要在外部类实例化后才能实例化。
 
-22、JSP中动态INCLUDE与静态INCLUDE的区别？
+</details>
+
+<b><details><summary>22、JSP中动态INCLUDE与静态INCLUDE的区别？</summary></b>
 
 动态INCLUDE用jsp:include动作实现 <jsp:include page="included.jsp" flush="true" />它总是会检查所含文件中的变化，适合用于包含动态页面，并且可以带参数。
-静态INCLUDE用include伪码实现,定不会检查所含文件的变化，适用于包含静态页面<%@ include file="included.htm" %> 
 
-23、什么时候用assert。 
+静态INCLUDE用include伪码实现,定不会检查所含文件的变化，适用于包含静态页面`<%@ include file="included.htm" %> `
+
+</details>
+
+<b><details><summary>23、什么时候用assert。 </summary></b>
 
 assertion(断言)在软件开发中是一种常用的调试方式，很多开发语言中都支持这种机制。在实现中，assertion就是在程序中的一条语句，它对一个boolean表达式进行检查，一个正确程序必须保证这个boolean表达式的值为true；如果该值为false，说明程序已经处于不正确的状态下，系统将给出警告或退出。一般来说，assertion用于保证程序最基本、关键的正确性。assertion检查通常在开发和测试时开启。为了提高性能，在软件发布后，assertion检查通常是关闭的。
 
-24、GC是什么? 为什么要有GC? 
+</details>
+
+<b><details><summary>24、GC是什么? 为什么要有GC? </summary></b>
 
 GC是垃圾收集的意思（Gabage Collection）,内存处理是编程人员容易出现问题的地方，忘记或者错误的内存回收会导致程序或系统的不稳定甚至崩溃，Java提供的GC功能可以自动监测对象是否超过作用域从而达到自动回收内存的目的，Java语言没有提供释放已分配内存的显示操作方法。 
 
-25、short s1 = 1; s1 = s1 + 1;有什么错? short s1 = 1; s1 += 1;有什么错? 
+</details>
+
+<b><details><summary>25、short s1 = 1; s1 = s1 + 1;有什么错? short s1 = 1; s1 += 1;有什么错? </summary></b>
 
 short s1 = 1; s1 = s1 + 1; （s1+1运算结果是int型，需要强制转换类型）
+
 short s1 = 1; s1 += 1;（可以正确编译）
 
-26、Math.round(11.5)等於多少? Math.round(-11.5)等於多少? 
+</details>
 
+<b><details><summary>26、Math.round(11.5)等于多少? Math.round(-11.5)等于多少? </summary></b>
+ 
+```java
 Math.round(11.5)==12
 Math.round(-11.5)==-11
+```
 round方法返回与参数最接近的长整数，参数加1/2后求其floor.
 
-27、String s = new String("xyz");创建了几个String Object? 
+</details>
+
+<b><details><summary>27、String s = new String("xyz");创建了几个String Object? </summary></b>
 
 两个
 
-28、设计4个线程，其中两个线程每次对j增加1，另外两个线程对j每次减少1。写出程序。
+</details>
+
+<b><details><summary>28、设计4个线程，其中两个线程每次对j增加1，另外两个线程对j每次减少1。写出程序。</summary></b>
 
 以下程序使用内部类实现线程，对j增减的时候没有考虑顺序问题。
 ```java
@@ -259,69 +274,124 @@ dec();
   }
 }
 ```
-29、Java有没有goto?
+
+</details>
+
+<b><details><summary>29、Java有没有goto?</summary></b>
 
 java中的保留字，现在没有在java中使用。
 
-30、启动一个线程是用run()还是start()?
+</details>
+
+<b><details><summary>30、启动一个线程是用run()还是start()?</summary></b>
 
 启动一个线程是调用start()方法，使线程所代表的虚拟处理机处于可运行状态，这意味着它可以由JVM调度并执行。这并不意味着线程就会立即运行。run()方法可以产生必须退出的标志来停止一个线程。 
 
+</details>
 
-31、EJB包括（SessionBean,EntityBean）说出他们的生命周期，及如何管理事务的？
+<b><details><summary>31、EJB包括（SessionBean,EntityBean）说出他们的生命周期，及如何管理事务的？</summary></b>
 
 SessionBean：Stateless Session Bean 的生命周期是由容器决定的，当客户机发出请求要建立一个Bean的实例时，EJB容器不一定要创建一个新的Bean的实例供客户机调用，而是随便找一个现有的实例提供给客户机。当客户机第一次调用一个Stateful Session Bean 时，容器必须立即在服务器中创建一个新的Bean实例，并关联到客户机上，以后此客户机调用Stateful Session Bean 的方法时容器会把调用分派到与此客户机相关联的Bean实例。
+
 EntityBean：Entity Beans能存活相对较长的时间，并且状态是持续的。只要数据库中的数据存在，Entity beans就一直存活。而不是按照应用程序或者服务进程来说的。即使EJB容器崩溃了，Entity beans也是存活的。Entity Beans生命周期能够被容器或者 Beans自己管理。
+
 EJB通过以下技术管理实务：对象管理组织（OMG）的对象实务服务（OTS），Sun Microsystems的Transaction Service（JTS）、Java Transaction API（JTA），开发组（X/Open）的XA接口。
 
-32、应用服务器有那些？
+</details>
+
+<b><details><summary>32、应用服务器有那些？</summary></b>
 
 BEA WebLogic Server，IBM WebSphere Application Server，Oracle9i Application Server，jBoss，Tomcat
 
-33、给我一个你最常见到的runtime exception。
+</details>
+
+<b><details><summary>33、给我一个你最常见到的runtime exception。</summary></b>
 
 ArithmeticException, ArrayStoreException, BufferOverflowException, BufferUnderflowException, CannotRedoException, CannotUndoException, ClassCastException, CMMException, ConcurrentModificationException, DOMException, EmptyStackException, IllegalArgumentException, IllegalMonitorStateException, IllegalPathStateException, IllegalStateException, ImagingOpException, IndexOutOfBoundsException, MissingResourceException, NegativeArraySizeException, NoSuchElementException, NullPointerException, ProfileDataException, ProviderException, RasterFormatException, SecurityException, SystemException, UndeclaredThrowableException, UnmodifiableSetException, UnsupportedOperationException
 
-34、接口是否可继承接口? 抽象类是否可实现(implements)接口? 抽象类是否可继承实体类(concrete class)?
+</details>
+
+<b><details><summary>34、接口是否可继承接口? 抽象类是否可实现(implements)接口? 抽象类是否可继承实体类(concrete class)?</summary></b>
 
 接口可以继承接口。抽象类可以实现(implements)接口，抽象类是否可继承实体类，但前提是实体类必须有明确的构造函数。
 
-35、List, Set, Map是否继承自Collection接口?
+</details>
+
+<b><details><summary>35、List, Set, Map是否继承自Collection接口?</summary></b>
 
 List，Set是，Map不是
 
-36、说出数据连接池的工作机制是什么?
+</details>
+
+<b><details><summary>36、说出数据连接池的工作机制是什么?</summary></b>
 
 J2EE服务器启动时会建立一定数量的池连接，并一直维持不少于此数目的池连接。客户端程序需要连接时，池驱动程序会返回一个未使用的池连接并将其表记为忙。如果当前没有空闲连接，池驱动程序就新建一定数量的连接，新建连接的数量有配置参数决定。当使用的池连接调用完成后，池驱动程序将此连接表记为空闲，其他调用就可以使用这个连接。
 
-37、abstract的method是否可同时是static,是否可同时是native，是否可同时是synchronized?
+</details>
+
+<b><details><summary>37、abstract的method是否可同时是static,是否可同时是native，是否可同时是synchronized?</summary></b>
 
 都不能
 
-38、数组有没有length()这个方法? String有没有length()这个方法？
+</details>
+
+<b><details><summary>38、数组有没有length()这个方法? String有没有length()这个方法？</summary></b>
 
 数组没有length()这个方法，有length的属性。String有有length()这个方法。
 
-39、Set里的元素是不能重复的，那么用什么方法来区分重复与否呢? 是用==还是equals()? 它们有何区别?
+</details>
 
-Set里的元素是不能重复的，那么用iterator()方法来区分重复与否。equals()是判读两个Set是否相等。
-    equals()和==方法决定引用值是否指向同一对象equals()在类中被覆盖，为的是当两个分离的对象的内容和类型相配的话，返回真值。
+<b><details><summary>39、Set里的元素是不能重复的，那么用什么方法来区分重复与否呢? 是用==还是equals()? 它们有何区别?</summary></b>
 
-40、构造器Constructor是否可被override?
+* Set里的元素是不能重复的，那么用iterator()方法来区分重复与否。equals()是判读两个Set是否相等。
+* equals()和==方法决定引用值是否指向同一对象equals()在类中被覆盖，为的是当两个分离的对象的内容和类型相配的话，返回真值。
+
+</details>
+
+<b><details><summary>40、构造器Constructor是否可被override?</summary></b>
 
 构造器Constructor不能被继承，因此不能重写Overriding，但可以被重载Overloading。
 
-41、是否可以继承String类?
+</details>
+
+<b><details><summary>41、是否可以继承String类?</summary></b>
 
 String类是final类故不可以继承。
 
-42、swtich是否能作用在byte上，是否能作用在long上，是否能作用在String上?
+</details>
+
+<b><details><summary>42、swtich是否能作用在byte上，是否能作用在long上，是否能作用在String上?</summary></b>
 
 switch（expr1）中，expr1是一个整数表达式。因此传递给 switch 和 case 语句的参数应该是 int、 short、 char 或者 byte。long,string 都不能作用于swtich。
 
-43、try {}里有一个return语句，那么紧跟在这个try后的finally {}里的code会不会被执行，什么时候被执行，在return前还是后?
+</details>
+
+<b><details><summary>43、try {}里有一个return语句，那么紧跟在这个try后的finally {}里的code会不会被执行，什么时候被执行，在return前还是后?</summary></b>
 
 会执行，在return前执行。
+
+</details>
+
+<b><details><summary></summary></b>
+
+</details>
+
+<b><details><summary></summary></b>
+
+</details>
+
+<b><details><summary></summary></b>
+
+</details>
+
+<b><details><summary></summary></b>
+
+</details>
+
+<b><details><summary></summary></b>
+
+</details>
+
 
 44、编程题: 用最有效率的方法算出2乘以8等於几? 
 
