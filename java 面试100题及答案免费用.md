@@ -372,44 +372,31 @@ switch（expr1）中，expr1是一个整数表达式。因此传递给 switch �
 
 </details>
 
-<b><details><summary></summary></b>
-
-</details>
-
-<b><details><summary></summary></b>
-
-</details>
-
-<b><details><summary></summary></b>
-
-</details>
-
-<b><details><summary></summary></b>
-
-</details>
-
-<b><details><summary></summary></b>
-
-</details>
-
-
-44、编程题: 用最有效率的方法算出2乘以8等於几? 
+<b><details><summary>44、编程题: 用最有效率的方法算出2乘以8等於几?</summary></b>
 
 2 << 3
 
-45、两个对象值相同(x.equals(y) == true)，但却可有不同的hash code，这句话对不对?
+</details>
+
+<b><details><summary>45、两个对象值相同(x.equals(y) == true)，但却可有不同的hash code，这句话对不对?</summary></b>
 
 不对，有相同的hash code。
 
-46、当一个对象被当作参数传递到一个方法后，此方法可改变这个对象的属性，并可返回变化后的结果，那么这里到底是值传递还是引用传递? 
+</details>
+
+<b><details><summary>46、当一个对象被当作参数传递到一个方法后，此方法可改变这个对象的属性，并可返回变化后的结果，那么这里到底是值传递还是引用传递? </summary></b>
 
 是值传递。Java 编程语言只有值传递参数。当一个对象实例作为一个参数被传递到方法中时，参数的值就是对该对象的引用。对象的内容可以在被调用的方法中改变，但对象的引用是永远不会改变的。
 
-47、当一个线程进入一个对象的一个synchronized方法后，其它线程是否可进入此对象的其它方法?
+</details>
+
+<b><details><summary>47、当一个线程进入一个对象的一个synchronized方法后，其它线程是否可进入此对象的其它方法?</summary></b>
 
 不能，一个对象的一个synchronized方法只能由一个线程访问。
 
-48、编程题: 写一个Singleton出来。
+</details>
+
+<b><details><summary>48、编程题: 写一个Singleton出来。</summary></b>
 
 Singleton模式主要作用是保证在Java应用程序中，一个类Class只有一个实例存在。
 一般Singleton模式通常有几种种形式:
@@ -442,44 +429,62 @@ return instance; 　　}
 定义一个类，它的构造函数为private的，所有方法为static的。
 一般认为第一种形式要更加安全些 
 
-49、Java的接口和C++的虚类的相同和不同处。
+</details>
+
+<b><details><summary>49、Java的接口和C++的虚类的相同和不同处。</summary></b>
 
 由于Java不支持多继承，而有可能某个类或对象要使用分别在几个类或对象里面的方法或属性，现有的单继承机制就不能满足要求。与继承相比，接口有更高的灵活性，因为接口中没有任何实现代码。当一个类实现了接口以后，该类要实现接口里面所有的方法和属性，并且接口里面的属性在默认状态下面都是public static,所有方法默认情况下是public.一个类可以实现多个接口。
 
-50、Java中的异常处理机制的简单原理和应用。
+</details>
+
+<b><details><summary>50、Java中的异常处理机制的简单原理和应用。</summary></b>
 
 当JAVA程序违反了JAVA的语义规则时，JAVA虚拟机就会将发生的错误表示为一个异常。违反语义规则包括2种情况。一种是JAVA类库内置的语义检查。例如数组下标越界,会引发IndexOutOfBoundsException;访问null的对象时会引发NullPointerException。另一种情况就是JAVA允许程序员扩展这种语义检查，程序员可以创建自己的异常，并自由选择在何时用throw关键字引发异常。所有的异常都是java.lang.Thowable的子类。
 
-51、垃圾回收的优点和原理。并考虑2种回收机制。
+</details>
 
+<b><details><summary>51、垃圾回收的优点和原理。并考虑2种回收机制。</summary></b>
+ 
 Java语言中一个显著的特点就是引入了垃圾回收机制，使c++程序员最头疼的内存管理的问题迎刃而解，它使得Java程序员在编写程序的时候不再需要考虑内存管理。由于有个垃圾回收机制，Java中的对象不再有"作用域"的概念，只有对象的引用才有"作用域"。垃圾回收可以有效的防止内存泄露，有效的使用可以使用的内存。垃圾回收器通常是作为一个单独的低级别的线程运行，不可预知的情况下对内存堆中已经死亡的或者长时间没有使用的对象进行清楚和回收，程序员不能实时的调用垃圾回收器对某个对象或所有对象进行垃圾回收。回收机制有分代复制垃圾回收和标记垃圾回收，增量垃圾回收。
 
-52、请说出你所知道的线程同步的方法。
+</details>
 
-wait():使一个线程处于等待状态，并且释放所持有的对象的lock。
-sleep():使一个正在运行的线程处于睡眠状态，是一个静态方法，调用此方法要捕捉InterruptedException异常。
-notify():唤醒一个处于等待状态的线程，注意的是在调用此方法的时候，并不能确切的唤醒某一个等待状态的线程，而是由JVM确定唤醒哪个线程，而且不是按优先级。
-Allnotity():唤醒所有处入等待状态的线程，注意并不是给所有唤醒线程一个对象的锁，而是让它们竞争。
+<b><details><summary>52、请说出你所知道的线程同步的方法。</summary></b>
 
-53、你所知道的集合类都有哪些？主要方法？
+* wait():使一个线程处于等待状态，并且释放所持有的对象的lock。
+* sleep():使一个正在运行的线程处于睡眠状态，是一个静态方法，调用此方法要捕捉InterruptedException异常。
+* notify():唤醒一个处于等待状态的线程，注意的是在调用此方法的时候，并不能确切的唤醒某一个等待状态的线程，而是由JVM确定唤醒哪个线程，而且不是按优先级。
+* Allnotity():唤醒所有处入等待状态的线程，注意并不是给所有唤醒线程一个对象的锁，而是让它们竞争。
+
+</details>
+
+<b><details><summary>53、你所知道的集合类都有哪些？主要方法？</summary></b>
 
 最常用的集合类是 List 和 Map。 List 的具体实现包括 ArrayList 和 Vector，它们是可变大小的列表，比较适合构建、存储和操作任何类型对象的元素列表。 List 适用于按数值索引访问元素的情形。 
 Map 提供了一个更通用的元素存储方法。 Map 集合类用于存储元素对（称作"键"和"值"），其中每个键映射到一个值。
 
-54、描述一下JVM加载class文件的原理机制?
+</details>
+
+<b><details><summary>54、描述一下JVM加载class文件的原理机制?</summary></b>
 
 JVM中类的装载是由ClassLoader和它的子类来实现的,Java ClassLoader 是一个重要的Java运行时系统组件。它负责在运行时查找和装入类文件的类。
 
-55、char型变量中能不能存贮一个中文汉字?为什么? 
+</details>
+
+<b><details><summary>55、char型变量中能不能存贮一个中文汉字?为什么? </summary></b>
 
 能够定义成为一个中文的，因为java中以unicode编码，一个char占16个字节，所以放一个中文是没问题的
 
-56、多线程有几种实现方法,都是什么?同步有几种实现方法,都是什么? 
+</details>
+
+<b><details><summary>56、多线程有几种实现方法,都是什么?同步有几种实现方法,都是什么? </summary></b>
 
 多线程有两种实现方法，分别是继承Thread类与实现Runnable接口 
 同步的实现方面有两种，分别是synchronized,wait与notify
 
-57、JSP的内置对象及方法。
+</details>
+
+<b><details><summary>57、JSP的内置对象及方法。</summary></b>
 
 request表示HttpServletRequest对象。它包含了有关浏览器请求的信息，并且提供了几个用于获取cookie, header, 和session数据的有用的方法。 
     response表示HttpServletResponse对象，并提供了几个用于设置送回 浏览器的响应的方法（如cookies,头信息等） 
@@ -490,39 +495,59 @@ request表示HttpServletRequest对象。它包含了有关浏览器请求的信�
     config表示一个javax.servlet.ServletConfig对象。该对象用于存取servlet实例的初始化参数。 
     page表示从该页面产生的一个servlet实例
 
-58、线程的基本概念、线程的基本状态以及状态之间的关系
+</details>
+
+<b><details><summary>58、线程的基本概念、线程的基本状态以及状态之间的关系</summary></b>
 
 线程指在程序执行过程中，能够执行程序代码的一个执行单位，每个程序至少都有一个线程，也就是程序本身。
-Java中的线程有四种状态分别是：运行、就绪、挂起、结束。 
+Java中的线程有四种状态分别是：运行、就绪、挂起、结束。
 
-59、JSP的常用指令
+</details>
 
+<b><details><summary>59、JSP的常用指令</summary></b>
+ 
+```
 <%@page language="java" contenType="text/html;charset=gb2312" session="true" buffer="64kb" autoFlush="true" isThreadSafe="true" info="text" errorPage="error.jsp" isErrorPage="true" isELIgnored="true" pageEncoding="gb2312" import="java.sql.*"%>
 isErrorPage(是否能使用Exception对象)，isELIgnored(是否忽略表达式)
 <%@include file="filename"%>
 <%@taglib prefix="c"uri="http://......"%>
+```
 
-60、什么情况下调用doGet()和doPost()？
+</details>
+
+<b><details><summary>60、什么情况下调用doGet()和doPost()？</summary></b>
 
 Jsp页面中的form标签里的method属性为get时调用doGet()，为post时调用doPost()。
 
-61、servlet的生命周期
+</details>
+
+<b><details><summary>61、servlet的生命周期</summary></b>
 
 web容器加载servlet，生命周期开始。通过调用servlet的init()方法进行servlet的初始化。通过调用service()方法实现，根据请求的不同调用不同的do***()方法。结束服务，web容器调用servlet的destroy()方法。
 
-62、如何现实servlet的单线程模式
+</details>
 
+<b><details><summary>62、如何现实servlet的单线程模式</summary></b>
+
+```
 <%@ page isThreadSafe="false"%>
+```
 
-63、页面间对象传递的方法
+</details>
+
+<b><details><summary>63、页面间对象传递的方法</summary></b>
 
 request，session，application，cookie等
 
-64、JSP和Servlet有哪些相同点和不同点，他们之间的联系是什么？ 
+</details>
+
+<b><details><summary>64、JSP和Servlet有哪些相同点和不同点，他们之间的联系是什么？ </summary></b>
 
 JSP是Servlet技术的扩展，本质上是Servlet的简易方式，更强调应用的外表表达。JSP编译后是"类servlet"。Servlet和JSP最主要的不同点在于，Servlet的应用逻辑是在Java文件中，并且完全从表示层中的HTML里分离开来。而JSP的情况是Java和HTML可以组合成一个扩展名为.jsp的文件。JSP侧重于视图，Servlet主要用于控制逻辑。
 
-65、四种会话跟踪技术
+</details>
+
+<b><details><summary>65、四种会话跟踪技术</summary></b>
 
 会话作用域ServletsJSP 页面描述
 page否是代表与一个页面相关的对象和属性。一个页面由一个编译好的 Java servlet 类（可以带有任何的 include 指令，但是没有 include 动作）表示。这既包括 servlet 又包括被编译成 servlet 的 JSP 页面
@@ -530,7 +555,10 @@ request是是代表与 Web 客户机发出的一个请求相关的对象和属�
 session是是代表与用于某个 Web 客户机的一个用户体验相关的对象和属性。一个 Web 会话可以也经常会跨越多个客户机请求
 application是是代表与整个 Web 应用程序相关的对象和属性。这实质上是跨越整个 Web 应用程序，包括多个页面、请求和会话的一个全局作用域
 
-66、Request对象的主要方法：
+</details>
+
+<b><details><summary>66、Request对象的主要方法：</summary></b>
+
 ```
 setAttribute(String name,Object)：设置名字为name的request的参数值
 getAttribute(String name)：返回由name指定的属性值
@@ -558,12 +586,17 @@ getServerPort()：获取服务器的端口号
 removeAttribute(String name)：删除请求中的一个属性
 ```
 
-67、J2EE是技术还是平台还是框架？
+</details>
+
+<b><details><summary>67、J2EE是技术还是平台还是框架？</summary></b>
 
 J2EE本身是一个标准，一个为企业分布式应用的开发提供的标准平台。
     J2EE也是一个框架，包括JDBC、JNDI、RMI、JMS、EJB、JTA等技术。
 
-68、我们在web应用开发过程中经常遇到输出某种编码的字符，如iso8859-1等，如何输出一个某种编码的字符串？
+</details>
+
+<b><details><summary>68、我们在web应用开发过程中经常遇到输出某种编码的字符，如iso8859-1等，如何输出一个某种编码的字符串？</summary></b>
+
   Public String translate (String str) {
     String tempStr = "";
     try {
@@ -575,73 +608,169 @@ J2EE本身是一个标准，一个为企业分布式应用的开发提供的标�
     }
     return tempStr;
   }
-69、简述逻辑操作(&,|,^)与条件操作(&&,||)的区别。
+
+</details>
+
+<b><details><summary>69、简述逻辑操作(&,|,^)与条件操作(&&,||)的区别。</summary></b>
+
 区别主要答两点：a.条件操作只能操作布尔型的,而逻辑操作不仅可以操作布尔型,而且可以操作数值型
 b.逻辑操作不会产生短路
-70、XML文档定义有几种形式？它们之间有何本质区别？解析XML文档有哪几种方式？ 
+
+</details>
+
+<b><details><summary>70、XML文档定义有几种形式？它们之间有何本质区别？解析XML文档有哪几种方式？ </summary></b>
+
 a: 两种形式 dtd  schema，b: 本质区别:schema本身是xml的，可以被XML解析器解析(这也是从DTD上发展schema的根本目的)，c:有DOM,SAX,STAX等 
     DOM:处理大型文件时其性能下降的非常厉害。这个问题是由DOM的树结构所造成的，这种结构占用的内存较多，而且DOM必须在解析文件之前把整个文档装入内存,适合对XML的随机访问
 SAX:不现于DOM,SAX是事件驱动型的XML解析方式。它顺序读取XML文件，不需要一次全部装载整个文件。当遇到像文件开头，文档结束，或者标签开头与标签结束时，它会触发一个事件，用户通过在其回调事件中写入处理代码来处理XML文件，适合对XML的顺序访问 
     STAX:Streaming API for XML (StAX)
-71、简述synchronized和java.util.concurrent.locks.Lock的异同 ？
+
+</details>
+
+<b><details><summary>71、简述synchronized和java.util.concurrent.locks.Lock的异同 ？</summary></b>
+
 主要相同点：Lock能完成synchronized所实现的所有功能
 主要不同点：Lock有比synchronized更精确的线程语义和更好的性能。synchronized会自动释放锁，而Lock一定要求程序员手工释放，并且必须在finally从句中释放。
-72、EJB的角色和三个对象
+
+</details>
+
+<b><details><summary>72、EJB的角色和三个对象</summary></b>
+
 一个完整的基于EJB的分布式计算结构由六个角色组成，这六个角色可以由不同的开发商提供，每个角色所作的工作必须遵循Sun公司提供的EJB规范，以保证彼此之间的兼容性。这六个角色分别是EJB组件开发者（Enterprise Bean Provider） 、应用组合者（Application Assembler）、部署者（Deployer）、EJB 服务器提供者（EJB Server Provider）、EJB 容器提供者（EJB Container Provider）、系统管理员（System Administrator）
 三个对象是Remote（Local）接口、Home（LocalHome）接口，Bean类
-73、EJB容器提供的服务
+
+</details>
+
+<b><details><summary>73、EJB容器提供的服务</summary></b>
+
 主要提供声明周期管理、代码产生、持续性管理、安全、事务管理、锁和并发行管理等服务。
-74、EJB规范规定EJB中禁止的操作有哪些？ 
-    1.不能操作线程和线程API(线程API指非线程对象的方法如notify,wait等)，2.不能操作awt，3.不能实现服务器功能，4.不能对静态属生存取，5.不能使用IO操作直接存取文件系统，6.不能加载本地库.，7.不能将this作为变量和返回，8.不能循环调用。
-75、remote接口和home接口主要作用
+
+</details>
+
+<b><details><summary>74、EJB规范规定EJB中禁止的操作有哪些？ </summary></b>
+
+1.不能操作线程和线程API(线程API指非线程对象的方法如notify,wait等)，2.不能操作awt，3.不能实现服务器功能，4.不能对静态属生存取，5.不能使用IO操作直接存取文件系统，6.不能加载本地库.，7.不能将this作为变量和返回，8.不能循环调用。
+
+</details>
+
+<b><details><summary>75、remote接口和home接口主要作用</summary></b>
+
 remote接口定义了业务方法，用于EJB客户端调用业务方法。
 home接口是EJB工厂用于创建和移除查找EJB实例
-76、bean 实例的生命周期
+
+</details>
+
+<b><details><summary>76、bean 实例的生命周期</summary></b>
+
 对于Stateless Session Bean、Entity Bean、Message Driven Bean一般存在缓冲池管理，而对于Entity Bean和Statefull Session Bean存在Cache管理，通常包含创建实例，设置上下文、创建EJB Object（create）、业务方法调用、remove等过程，对于存在缓冲池管理的Bean，在create之后实例并不从内存清除，而是采用缓冲池调度机制不断重用实例，而对于存在Cache管理的Bean则通过激活和去激活机制保持Bean的状态并限制内存中实例数量。
-77、EJB的激活机制
+
+</details>
+
+<b><details><summary>77、EJB的激活机制</summary></b>
+
 以Stateful Session Bean 为例：其Cache大小决定了内存中可以同时存在的Bean实例的数量，根据MRU或NRU算法，实例在激活和去激活状态之间迁移，激活机制是当客户端调用某个EJB实例业务方法时，如果对应EJB Object发现自己没有绑定对应的Bean实例则从其去激活Bean存储中（通过序列化机制存储实例）回复（激活）此实例。状态变迁前会调用对应的ejbActive和ejbPassivate方法。
-78、EJB的几种类型
+
+</details>
+
+<b><details><summary>78、EJB的几种类型</summary></b>
+
 会话（Session）Bean ，实体（Entity）Bean 消息驱动的（Message Driven）Bean
 会话Bean又可分为有状态（Stateful）和无状态（Stateless）两种
 实体Bean可分为Bean管理的持续性（BMP）和容器管理的持续性（CMP）两种
-79、客服端调用EJB对象的几个基本步骤
+
+</details>
+
+<b><details><summary>79、客服端调用EJB对象的几个基本步骤</summary></b>
+
 设置JNDI服务工厂以及JNDI服务地址系统属性，查找Home接口，从Home接口调用Create方法创建Remote接口，通过Remote接口调用其业务方法。
-80、如何给weblogic指定大小的内存? 
+
+</details>
+
+<b><details><summary>80、如何给weblogic指定大小的内存? </summary></b>
+
 在启动Weblogic的脚本中（位于所在Domian对应服务器目录下的startServerName），增加set MEM_ARGS=-Xms32m -Xmx200m，可以调整最小内存为32M，最大200M
-81、如何设定的weblogic的热启动模式(开发模式)与产品发布模式?
+
+</details>
+
+<b><details><summary>81、如何设定的weblogic的热启动模式(开发模式)与产品发布模式?</summary></b>
+
 可以在管理控制台中修改对应服务器的启动模式为开发或产品模式之一。或者修改服务的启动文件或者commenv文件，增加set PRODUCTION_MODE=true。
-82、如何启动时不需输入用户名与密码?
+
+</details>
+
+<b><details><summary>82、如何启动时不需输入用户名与密码?</summary></b>
+
 修改服务启动文件，增加 WLS_USER和WLS_PW项。也可以在boot.properties文件中增加加密过的用户名和密码.
-83、在weblogic管理制台中对一个应用域(或者说是一个网站,Domain)进行jms及ejb或连接池等相关信息进行配置后,实际保存在什么文件中?
+
+</details>
+
+<b><details><summary>83、在weblogic管理制台中对一个应用域(或者说是一个网站,Domain)进行jms及ejb或连接池等相关信息进行配置后,实际保存在什么文件中?</summary></b>
+
 保存在此Domain的config.xml文件中，它是服务器的核心配置文件。
-84、说说weblogic中一个Domain的缺省目录结构?比如要将一个简单的helloWorld.jsp放入何目录下,然的在浏览器上就可打入http://主机:端口号//helloword.jsp就可以看到运行结果了? 又比如这其中用到了一个自己写的javaBean该如何办?
+
+</details>
+
+<b><details><summary>84、说说weblogic中一个Domain的缺省目录结构?比如要将一个简单的helloWorld.jsp放入何目录下,然的在浏览器上就可打入http://主机:端口号//helloword.jsp就可以看到运行结果了? 又比如这其中用到了一个自己写的javaBean该如何办?</summary></b>
+
 Domain目录\服务器目录\applications，将应用目录放在此目录下将可以作为应用访问，如果是Web应用，应用目录需要满足Web应用目录要求，jsp文件可以直接放在应用目录中，Javabean需要放在应用目录的WEB-INF目录的classes目录中，设置服务器的缺省应用将可以实现在浏览器上无需输入应用名。
-85、在weblogic中发布ejb需涉及到哪些配置文件
+
+</details>
+
+<b><details><summary>85、在weblogic中发布ejb需涉及到哪些配置文件</summary></b>
+
 不同类型的EJB涉及的配置文件不同，都涉及到的配置文件包括ejb-jar.xml,weblogic-ejb-jar.xmlCMP实体Bean一般还需要weblogic-cmp-rdbms-jar.xml 
-86、如何在weblogic中进行ssl配置与客户端的认证配置或说说j2ee(标准)进行ssl的配置
+
+</details>
+
+<b><details><summary>86、如何在weblogic中进行ssl配置与客户端的认证配置或说说j2ee(标准)进行ssl的配置</summary></b>
+
 缺省安装中使用DemoIdentity.jks和DemoTrust.jks  KeyStore实现SSL，需要配置服务器使用Enable SSL，配置其端口，在产品模式下需要从CA获取私有密钥和数字证书，创建identity和trust keystore，装载获得的密钥和数字证书。可以配置此SSL连接是单向还是双向的。
-87、如何查看在weblogic中已经发布的EJB?
+
+</details>
+
+<b><details><summary>87、如何查看在weblogic中已经发布的EJB?</summary></b>
+
 可以使用管理控制台，在它的Deployment中可以查看所有已发布的EJB
-88、CORBA是什么?用途是什么? 
+
+</details>
+
+<b><details><summary>88、CORBA是什么?用途是什么? </summary></b>
+
 CORBA 标准是公共对象请求代理结构(Common Object Request Broker Architecture)，由对象管理组织 (Object Management Group，缩写为 OMG)标准化。它的组成是接口定义语言(IDL), 语言绑定(binding:也译为联编)和允许应用程序间互操作的协议。 其目的为：用不同的程序设计语言书写在不同的进程中运行，为不同的操作系统开发。
-89、说说你所熟悉或听说过的j2ee中的几种常用模式?及对设计模式的一些看法
-  Session Facade Pattern：使用SessionBean访问EntityBean
+
+</details>
+
+<b><details><summary>89、说说你所熟悉或听说过的j2ee中的几种常用模式?及对设计模式的一些看法</summary></b>
+
+Session Facade Pattern：使用SessionBean访问EntityBean
 Message Facade Pattern：实现异步调用
 EJB Command Pattern：使用Command JavaBeans取代SessionBean，实现轻量级访问
 Data Transfer Object Factory：通过DTO Factory简化EntityBean数据提供特性
 Generic Attribute Access：通过AttibuteAccess接口简化EntityBean数据提供特性
 Business Interface：通过远程（本地）接口和Bean类实现相同接口规范业务逻辑一致性
 ＥＪＢ架构的设计好坏将直接影响系统的性能、可扩展性、可维护性、组件可重用性及开发效率。项目越复杂，项目队伍越庞大则越能体现良好设计的重要性。
-90、说说在weblogic中开发消息Bean时的persistent与non-persisten的差别
+
+</details>
+
+<b><details><summary>90、说说在weblogic中开发消息Bean时的persistent与non-persisten的差别</summary></b>
+
 persistent方式的MDB可以保证消息传递的可靠性,也就是如果EJB容器出现问题而JMS服务器依然会将消息在此MDB可用的时候发送过来，而non－persistent方式的消息将被丢弃。
-91、Servlet执行时一般实现哪几个方法？
+
+</details>
+
+<b><details><summary>91、Servlet执行时一般实现哪几个方法？</summary></b>
+
 public void init(ServletConfig config)
 public ServletConfig getServletConfig()
 public String getServletInfo()
 public void service(ServletRequest request,ServletResponse response)
 public void destroy()
-92、j2ee常用的设计模式？说明工厂模式。
-    Java中的23种设计模式：
+
+</details>
+
+<b><details><summary>92、j2ee常用的设计模式？说明工厂模式。</summary></b>
+
+Java中的23种设计模式：
 Factory（工厂模式），      Builder（建造模式），       Factory Method（工厂方法模式），
 Prototype（原始模型模式），Singleton（单例模式），    Facade（门面模式），
 Adapter（适配器模式），    Bridge（桥梁模式），        Composite（合成模式），
@@ -651,10 +780,18 @@ Iterator（迭代子模式），   Mediator（调停者模式），    Meme
 Observer（观察者模式），   State（状态模式），         Strategy（策略模式），
 Template Method（模板方法模式）， Chain Of Responsibleity（责任链模式）
 工厂模式：工厂模式是一种经常被使用到的模式，根据工厂模式实现的类可以根据提供的数据生成一组类中某一个类的实例，通常这一组类有一个公共的抽象父类并且实现了相同的方法，但是这些方法针对不同的数据进行了不同的操作。首先需要定义一个基类，该类的子类通过不同的方法实现了基类中的方法。然后需要定义一个工厂类，工厂类可以根据条件生成不同的子类实例。当得到子类的实例后，开发人员可以调用基类中的方法而不必考虑到底返回的是哪一个子类的实例。
-93、EJB需直接实现它的业务接口或Home接口吗，请简述理由。
+
+</details>
+
+<b><details><summary>93、EJB需直接实现它的业务接口或Home接口吗，请简述理由。</summary></b>
+
 远程接口和Home接口不需要直接实现，他们的实现代码是由服务器产生的，程序运行中对应实现类会作为对应接口类型的实例被使用。
-94、排序都有哪几种方法？请列举。用JAVA实现一个快速排序。
-    排序的方法有：插入排序（直接插入排序、希尔排序），交换排序（冒泡排序、快速排序），选择排序（直接选择排序、堆排序），归并排序，分配排序（箱排序、基数排序）
+
+</details>
+
+<b><details><summary>94、排序都有哪几种方法？请列举。用JAVA实现一个快速排序。</summary></b>
+
+ 排序的方法有：插入排序（直接插入排序、希尔排序），交换排序（冒泡排序、快速排序），选择排序（直接选择排序、堆排序），归并排序，分配排序（箱排序、基数排序）
 快速排序的伪代码。
 / /使用快速排序方法对a[ 0 :n- 1 ]排序
 从a[ 0 :n- 1 ]中选择一个元素作为m i d d l e，该元素为支点
@@ -662,7 +799,11 @@ Template Method（模板方法模式）， Chain Of Responsibleity（责任链�
 递归地使用快速排序方法对left 进行排序
 递归地使用快速排序方法对right 进行排序
 所得结果为l e f t + m i d d l e + r i g h t
-95、请对以下在J2EE中常用的名词进行解释(或简单描述)
+
+</details>
+
+<b><details><summary>95、请对以下在J2EE中常用的名词进行解释(或简单描述)</summary></b>
+
 web容器：给处于其中的应用程序组件（JSP，SERVLET）提供一个环境，使JSP,SERVLET直接更容器中的环境变量接口交互，不必关注其它系统问题。主要有WEB服务器来实现。例如：TOMCAT,WEBLOGIC,WEBSPHERE等。该容器提供的接口严格遵守J2EE规范中的WEB APPLICATION 标准。我们把遵守以上标准的WEB服务器就叫做J2EE中的WEB容器。
 EJB容器：Enterprise java bean 容器。更具有行业领域特色。他提供给运行在其中的组件EJB各种管理功能。只要满足J2EE规范的EJB放入该容器，马上就会被容器进行高效率的管理。并且可以通过现成的接口来获得系统级别的服务。例如邮件服务、事务管理。
 JNDI：（Java Naming & Directory Interface）JAVA命名目录服务。主要提供的功能是：提供一个目录系统，让其它各地的应用程序在其上面留下自己的索引，从而满足快速查找和定位分布式应用程序的功能。
@@ -670,23 +811,79 @@ JMS：（Java Message Service）JAVA消息服务。主要实现各个应用程�
 JTA：（Java Transaction API）JAVA事务服务。提供各种分布式事务服务。应用程序只需调用其提供的接口即可。
 JAF：（Java Action FrameWork）JAVA安全认证框架。提供一些安全控制方面的框架。让开发者通过各种部署和自定义实现自己的个性安全控制策略。
 RMI/IIOP:（Remote Method Invocation /internet对象请求中介协议）他们主要用于通过远程调用服务。例如，远程有一台计算机上运行一个程序，它提供股票分析服务，我们可以在本地计算机上实现对其直接调用。当然这是要通过一定的规范才能在异构的系统之间进行通信。RMI是JAVA特有的。
-96、JAVA语言如何进行异常处理，关键字：throws,throw,try,catch,finally分别代表什么意义？在try块中可以抛出异常吗？
+
+</details>
+
+<b><details><summary>96、JAVA语言如何进行异常处理，关键字：throws,throw,try,catch,finally分别代表什么意义？在try块中可以抛出异常吗？</summary></b>
+
 Java通过面向对象的方法进行异常处理，把各种不同的异常进行分类，并提供了良好的接口。在Java中，每个异常都是一个对象，它是Throwable类或其它子类的实例。当一个方法出现异常后便抛出一个异常对象，该对象中包含有异常信息，调用这个对象的方法可以捕获到这个异常并进行处理。Java的异常处理是通过5个关键词来实现的：try、catch、throw、throws和finally。一般情况下是用try来执行一段程序，如果出现异常，系统会抛出（throws）一个异常，这时候你可以通过它的类型来捕捉（catch）它，或最后（finally）由缺省处理器来处理。
 用try来指定一块预防所有"异常"的程序。紧跟在try程序后面，应包含一个catch子句来指定你想要捕捉的"异常"的类型。
 throw语句用来明确地抛出一个"异常"。
 throws用来标明一个成员函数可能抛出的各种"异常"。
 Finally为确保一段代码不管发生什么"异常"都被执行一段代码。
 可以在一个成员函数调用的外面写一个try语句，在这个成员函数内部写另一个try语句保护其他代码。每当遇到一个try语句，"异常"的框架就放到堆栈上面，直到所有的try语句都完成。如果下一级的try语句没有对某种"异常"进行处理，堆栈就会展开，直到遇到有处理这种"异常"的try语句。
-97、一个".java"源文件中是否可以包括多个类（不是内部类）？有什么限制？
+
+</details>
+
+<b><details><summary>97、一个".java"源文件中是否可以包括多个类（不是内部类）？有什么限制？</summary></b>
+
 可以。必须只有一个类名与文件名相同。
-98、MVC的各个部分都有那些技术来实现?如何实现? 
+
+</details>
+
+<b><details><summary>98、MVC的各个部分都有那些技术来实现?如何实现? </summary></b>
+
 MVC是Model－View－Controller的简写。"Model" 代表的是应用的业务逻辑（通过JavaBean，EJB组件实现）， "View" 是应用的表示面（由JSP页面产生），"Controller" 是提供应用的处理过程控制（一般是一个Servlet），通过这种设计模型把应用逻辑，处理过程和显示逻辑分成不同的组件实现。这些组件可以进行交互和重用。
-99、java中有几种方法可以实现一个线程？用什么关键字修饰同步方法? stop()和suspend()方法为何不推荐使用？
+
+</details>
+
+<b><details><summary>99、java中有几种方法可以实现一个线程？用什么关键字修饰同步方法? stop()和suspend()方法为何不推荐使用？</summary></b>
+
 有两种实现方法，分别是继承Thread类与实现Runnable接口
 用synchronized关键字修饰同步方法
 反对使用stop()，是因为它不安全。它会解除由线程获取的所有锁定，而且如果对象处于一种不连贯状态，那么其他线程能在那种状态下检查和修改它们。结果很难检查出真正的问题所在。suspend()方法容易发生死锁。调用suspend()的时候，目标线程会停下来，但却仍然持有在这之前获得的锁定。此时，其他任何线程都不能访问锁定的资源，除非被"挂起"的线程恢复运行。对任何线程来说，如果它们想恢复目标线程，同时又试图使用任何一个锁定的资源，就会造成死锁。所以不应该使用suspend()，而应在自己的Thread类中置入一个标志，指出线程应该活动还是挂起。若标志指出线程应该挂起，便用wait()命其进入等待状态。若标志指出线程应当恢复，则用一个notify()重新启动线程。
-100、java中有几种类型的流？JDK为每种类型的流提供了一些抽象类以供继承，请说出他们分别是哪些类？
+
+</details>
+
+<b><details><summary>100、java中有几种类型的流？JDK为每种类型的流提供了一些抽象类以供继承，请说出他们分别是哪些类？</summary></b>
+
 字节流，字符流。字节流继承于InputStream \ OutputStream，字符流继承于InputStreamReader \ OutputStreamWriter。在java.io包中还有许多其他的流，主要是为了提高性能和使用方便。
+
+</details>
+
+<b><details><summary></summary></b>
+
+</details>
+
+<b><details><summary></summary></b>
+
+</details>
+
+<b><details><summary></summary></b>
+
+</details>
+
+<b><details><summary></summary></b>
+
+</details>
+
+    
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
 101、java中会存在内存泄漏吗，请简单描述。
 会。如：int i,i2;  return (i-i2);   //when i为足够大的正数,i2为足够大的负数。结果会造成溢位，导致错误。
 102、java中实现多态的机制是什么？
