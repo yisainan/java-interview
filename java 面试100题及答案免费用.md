@@ -19,15 +19,15 @@
 </details>
 
 <b><details><summary>2、String是最基本的数据类型吗?</summary></b>
- 
+
 基本数据类型包括byte、int、char、long、float、double、boolean和short。
 
-java.lang.String类是final类型的，因此不可以继承这个类、不能修改这个类。为了提高效率节省空间，我们应该用StringBuffer类 
- 
+java.lang.String类是final类型的，因此不可以继承这个类、不能修改这个类。为了提高效率节省空间，我们应该用StringBuffer类
+
 </details>
 
 <b><details><summary>3、int 和 Integer 有什么区别</summary></b>
- 
+
 Java 提供两种不同的类型：引用类型和原始类型（或内置类型）。Int是java的原始数据类型，Integer是java为int提供的封装类。Java为每个原始类型提供了封装类。
 原始类型封装类
 ```
@@ -52,17 +52,17 @@ JAVA平台提供了两个类：String和StringBuffer，它们可以储存和操�
 </details>
 
 <b><details><summary>5、运行时异常与一般异常有何异同？</summary></b>
- 
+
 异常表示程序运行过程中可能出现的非正常状态，运行时异常表示虚拟机的通常操作中可能遇到的异常，是一种常见运行错误。java编译器要求方法必须声明抛出可能发生的非运行时异常，但是并不要求必须声明抛出未被捕获的运行时异常。
- 
+
 </details>
 
 <b><details><summary>6、说出Servlet的生命周期，并说出Servlet和CGI的区别。</summary></b>
- 
+
 Servlet被服务器实例化后，容器运行其init方法，请求到达时运行其service方法，service方法自动派遣运行与请求对应的doXXX方法（doGet，doPost）等，当服务器决定将实例销毁的时候调用其destroy方法。
 
-与cgi的区别在于servlet处于服务器进程中，它通过多线程方式运行其service方法，一个实例可以服务于多个请求，并且其实例一般不会销毁，而CGI对每个请求都产生新的进程，服务完成后就销毁，所以效率上低于servlet。 
- 
+与cgi的区别在于servlet处于服务器进程中，它通过多线程方式运行其service方法，一个实例可以服务于多个请求，并且其实例一般不会销毁，而CGI对每个请求都产生新的进程，服务完成后就销毁，所以效率上低于servlet。
+
 </details>
 
 <b><details><summary>7、说出ArrayList,Vector, LinkedList的存储性能和特性</summary></b>
@@ -85,10 +85,10 @@ Session Bean 还可以再细分为 Stateful Session Bean 与 Stateless Session B
 </details>
 
 <b><details><summary>9、Collection 和 Collections的区别。 </summary></b>
- 
+
 Collection是集合类的上级接口，继承与他的接口主要有Set 和List.
 Collections是针对集合类的一个帮助类，他提供一系列静态方法实现对各种集合的搜索、排序、线程安全化等操作。
- 
+
 </details>
 
 <b><details><summary>10、&和&&的区别。 </summary></b>
@@ -103,18 +103,18 @@ HashMap是Hashtable的轻量级实现（非线程安全的实现），他们都�
 
 HashMap允许将null作为一个entry的key或者value，而Hashtable不允许。
 
-HashMap把Hashtable的contains方法去掉了，改成containsvalue和containsKey。因为contains方法容易让人引起误解。 
+HashMap把Hashtable的contains方法去掉了，改成containsvalue和containsKey。因为contains方法容易让人引起误解。
 
 Hashtable继承自Dictionary类，而HashMap是Java1.2引进的Map interface的一个实现。
 
-最大的不同是，Hashtable的方法是Synchronize的，而HashMap不是，在多个线程访问Hashtable时，不需要自己为它的方法实现同步，而HashMap 就必须为之提供外同步。 
+最大的不同是，Hashtable的方法是Synchronize的，而HashMap不是，在多个线程访问Hashtable时，不需要自己为它的方法实现同步，而HashMap 就必须为之提供外同步。
 
 Hashtable和HashMap采用的hash/rehash算法都大概一样，所以性能不会有很大的差异。
 
 </details>
 
 <b><details><summary>12、final, finally, finalize的区别。 </summary></b>
- 
+
 * final 用于声明属性，方法和类，分别表示属性不可变，方法不可覆盖，类不可继承。
 * finally是异常处理语句结构的一部分，表示总是执行。
 * finalize是Object类的一个方法，在垃圾收集器执行的时候会调用被回收对象的此方法，可以覆盖此方法提供垃圾收集时的其他资源回收，例如关闭文件等。
@@ -184,7 +184,7 @@ Enterprise Java Bean 相当于DCOM，即分布式组件。它是基于Java的远
 </details>
 
 <b><details><summary>21、Static Nested Class 和 Inner Class的不同。</summary></b>
- 
+
 Static Nested Class是被声明为静态（static）的内部类，它可以不依赖于外部类实例被实例化。而通常的内部类需要在外部类实例化后才能实例化。
 
 </details>
@@ -205,7 +205,7 @@ assertion(断言)在软件开发中是一种常用的调试方式，很多开发
 
 <b><details><summary>24、GC是什么? 为什么要有GC? </summary></b>
 
-GC是垃圾收集的意思（Gabage Collection）,内存处理是编程人员容易出现问题的地方，忘记或者错误的内存回收会导致程序或系统的不稳定甚至崩溃，Java提供的GC功能可以自动监测对象是否超过作用域从而达到自动回收内存的目的，Java语言没有提供释放已分配内存的显示操作方法。 
+GC是垃圾收集的意思（Gabage Collection）,内存处理是编程人员容易出现问题的地方，忘记或者错误的内存回收会导致程序或系统的不稳定甚至崩溃，Java提供的GC功能可以自动监测对象是否超过作用域从而达到自动回收内存的目的，Java语言没有提供释放已分配内存的显示操作方法。
 
 </details>
 
@@ -218,7 +218,7 @@ short s1 = 1; s1 += 1;（可以正确编译）
 </details>
 
 <b><details><summary>26、Math.round(11.5)等于多少? Math.round(-11.5)等于多少? </summary></b>
- 
+
 ```java
 Math.round(11.5)==12
 Math.round(-11.5)==-11
@@ -285,7 +285,7 @@ java中的保留字，现在没有在java中使用。
 
 <b><details><summary>30、启动一个线程是用run()还是start()?</summary></b>
 
-启动一个线程是调用start()方法，使线程所代表的虚拟处理机处于可运行状态，这意味着它可以由JVM调度并执行。这并不意味着线程就会立即运行。run()方法可以产生必须退出的标志来停止一个线程。 
+启动一个线程是调用start()方法，使线程所代表的虚拟处理机处于可运行状态，这意味着它可以由JVM调度并执行。这并不意味着线程就会立即运行。run()方法可以产生必须退出的标志来停止一个线程。
 
 </details>
 
@@ -410,24 +410,24 @@ private Singleton(){}
 　　    //这里提供了一个供外部访问本class的静态方法，可以直接访问　　
 　　    public static Singleton getInstance() {
 　　　　    return instance; 　　
-　　    } 
-    } 
+　　    }
+    }
 ```
 ```java
-    第二种形式: 
-public class Singleton { 
+    第二种形式:
+public class Singleton {
 　　private static Singleton instance = null;
 　　public static synchronized Singleton getInstance() {
 　　//这个方法比上面有所改进，不用每次都进行生成对象，只是第一次　　　 　
 　　//使用时生成实例，提高了效率！
 　　if (instance==null)
 　　　　instance＝new Singleton();
-return instance; 　　} 
-} 
+return instance; 　　}
+}
 ```
 其他形式:
 定义一个类，它的构造函数为private的，所有方法为static的。
-一般认为第一种形式要更加安全些 
+一般认为第一种形式要更加安全些
 
 </details>
 
@@ -444,7 +444,7 @@ return instance; 　　}
 </details>
 
 <b><details><summary>51、垃圾回收的优点和原理。并考虑2种回收机制。</summary></b>
- 
+
 Java语言中一个显著的特点就是引入了垃圾回收机制，使c++程序员最头疼的内存管理的问题迎刃而解，它使得Java程序员在编写程序的时候不再需要考虑内存管理。由于有个垃圾回收机制，Java中的对象不再有"作用域"的概念，只有对象的引用才有"作用域"。垃圾回收可以有效的防止内存泄露，有效的使用可以使用的内存。垃圾回收器通常是作为一个单独的低级别的线程运行，不可预知的情况下对内存堆中已经死亡的或者长时间没有使用的对象进行清楚和回收，程序员不能实时的调用垃圾回收器对某个对象或所有对象进行垃圾回收。回收机制有分代复制垃圾回收和标记垃圾回收，增量垃圾回收。
 
 </details>
@@ -460,7 +460,7 @@ Java语言中一个显著的特点就是引入了垃圾回收机制，使c++程�
 
 <b><details><summary>53、你所知道的集合类都有哪些？主要方法？</summary></b>
 
-最常用的集合类是 List 和 Map。 List 的具体实现包括 ArrayList 和 Vector，它们是可变大小的列表，比较适合构建、存储和操作任何类型对象的元素列表。 List 适用于按数值索引访问元素的情形。 
+最常用的集合类是 List 和 Map。 List 的具体实现包括 ArrayList 和 Vector，它们是可变大小的列表，比较适合构建、存储和操作任何类型对象的元素列表。 List 适用于按数值索引访问元素的情形。
 Map 提供了一个更通用的元素存储方法。 Map 集合类用于存储元素对（称作"键"和"值"），其中每个键映射到一个值。
 
 </details>
@@ -479,20 +479,20 @@ JVM中类的装载是由ClassLoader和它的子类来实现的,Java ClassLoader 
 
 <b><details><summary>56、多线程有几种实现方法,都是什么?同步有几种实现方法,都是什么? </summary></b>
 
-多线程有两种实现方法，分别是继承Thread类与实现Runnable接口 
+多线程有两种实现方法，分别是继承Thread类与实现Runnable接口
 同步的实现方面有两种，分别是synchronized,wait与notify
 
 </details>
 
 <b><details><summary>57、JSP的内置对象及方法。</summary></b>
 
-request表示HttpServletRequest对象。它包含了有关浏览器请求的信息，并且提供了几个用于获取cookie, header, 和session数据的有用的方法。 
-    response表示HttpServletResponse对象，并提供了几个用于设置送回 浏览器的响应的方法（如cookies,头信息等） 
-    out对象是javax.jsp.JspWriter的一个实例，并提供了几个方法使你能用于向浏览器回送输出结果。 
-    pageContext表示一个javax.servlet.jsp.PageContext对象。它是用于方便存取各种范围的名字空间、servlet相关的对象的API，并且包装了通用的servlet相关功能的方法。 
-    session表示一个请求的javax.servlet.http.HttpSession对象。Session可以存贮用户的状态信息 
-    applicaton 表示一个javax.servle.ServletContext对象。这有助于查找有关servlet引擎和servlet环境的信息 
-    config表示一个javax.servlet.ServletConfig对象。该对象用于存取servlet实例的初始化参数。 
+request表示HttpServletRequest对象。它包含了有关浏览器请求的信息，并且提供了几个用于获取cookie, header, 和session数据的有用的方法。
+    response表示HttpServletResponse对象，并提供了几个用于设置送回 浏览器的响应的方法（如cookies,头信息等）
+    out对象是javax.jsp.JspWriter的一个实例，并提供了几个方法使你能用于向浏览器回送输出结果。
+    pageContext表示一个javax.servlet.jsp.PageContext对象。它是用于方便存取各种范围的名字空间、servlet相关的对象的API，并且包装了通用的servlet相关功能的方法。
+    session表示一个请求的javax.servlet.http.HttpSession对象。Session可以存贮用户的状态信息
+    applicaton 表示一个javax.servle.ServletContext对象。这有助于查找有关servlet引擎和servlet环境的信息
+    config表示一个javax.servlet.ServletConfig对象。该对象用于存取servlet实例的初始化参数。
     page表示从该页面产生的一个servlet实例
 
 </details>
@@ -505,7 +505,7 @@ Java中的线程有四种状态分别是：运行、就绪、挂起、结束。
 </details>
 
 <b><details><summary>59、JSP的常用指令</summary></b>
- 
+
 ```
 <%@page language="java" contenType="text/html;charset=gb2312" session="true" buffer="64kb" autoFlush="true" isThreadSafe="true" info="text" errorPage="error.jsp" isErrorPage="true" isELIgnored="true" pageEncoding="gb2312" import="java.sql.*"%>
 isErrorPage(是否能使用Exception对象)，isELIgnored(是否忽略表达式)
@@ -620,9 +620,9 @@ b.逻辑操作不会产生短路
 
 <b><details><summary>70、XML文档定义有几种形式？它们之间有何本质区别？解析XML文档有哪几种方式？ </summary></b>
 
-a: 两种形式 dtd  schema，b: 本质区别:schema本身是xml的，可以被XML解析器解析(这也是从DTD上发展schema的根本目的)，c:有DOM,SAX,STAX等 
+a: 两种形式 dtd  schema，b: 本质区别:schema本身是xml的，可以被XML解析器解析(这也是从DTD上发展schema的根本目的)，c:有DOM,SAX,STAX等
     DOM:处理大型文件时其性能下降的非常厉害。这个问题是由DOM的树结构所造成的，这种结构占用的内存较多，而且DOM必须在解析文件之前把整个文档装入内存,适合对XML的随机访问
-SAX:不现于DOM,SAX是事件驱动型的XML解析方式。它顺序读取XML文件，不需要一次全部装载整个文件。当遇到像文件开头，文档结束，或者标签开头与标签结束时，它会触发一个事件，用户通过在其回调事件中写入处理代码来处理XML文件，适合对XML的顺序访问 
+SAX:不现于DOM,SAX是事件驱动型的XML解析方式。它顺序读取XML文件，不需要一次全部装载整个文件。当遇到像文件开头，文档结束，或者标签开头与标签结束时，它会触发一个事件，用户通过在其回调事件中写入处理代码来处理XML文件，适合对XML的顺序访问
     STAX:Streaming API for XML (StAX)
 
 </details>
@@ -718,7 +718,7 @@ Domain目录\服务器目录\applications，将应用目录放在此目录下将
 
 <b><details><summary>85、在weblogic中发布ejb需涉及到哪些配置文件</summary></b>
 
-不同类型的EJB涉及的配置文件不同，都涉及到的配置文件包括ejb-jar.xml,weblogic-ejb-jar.xmlCMP实体Bean一般还需要weblogic-cmp-rdbms-jar.xml 
+不同类型的EJB涉及的配置文件不同，都涉及到的配置文件包括ejb-jar.xml,weblogic-ejb-jar.xmlCMP实体Bean一般还需要weblogic-cmp-rdbms-jar.xml
 
 </details>
 
@@ -851,120 +851,196 @@ MVC是Model－View－Controller的简写。"Model" 代表的是应用的业务�
 
 </details>
 
-<b><details><summary></summary></b>
+<b><details><summary>101、java中会存在内存泄漏吗，请简单描述。</summary></b>
 
-</details>
-
-<b><details><summary></summary></b>
-
-</details>
-
-<b><details><summary></summary></b>
-
-</details>
-
-<b><details><summary></summary></b>
-
-</details>
-
-    
-
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-101、java中会存在内存泄漏吗，请简单描述。
 会。如：int i,i2;  return (i-i2);   //when i为足够大的正数,i2为足够大的负数。结果会造成溢位，导致错误。
-102、java中实现多态的机制是什么？
+
+</details>
+
+<b><details><summary>102、java中实现多态的机制是什么？</summary></b>
+
 方法的重写Overriding和重载Overloading是Java多态性的不同表现。重写Overriding是父类与子类之间多态性的一种表现，重载Overloading是一个类中多态性的一种表现。
-103、垃圾回收器的基本原理是什么？垃圾回收器可以马上回收内存吗？有什么办法主动通知虚拟机进行垃圾回收？
+
+</details>
+
+<b><details><summary>103、垃圾回收器的基本原理是什么？垃圾回收器可以马上回收内存吗？有什么办法主动通知虚拟机进行垃圾回收？</summary></b>
+
 对于GC来说，当程序员创建对象时，GC就开始监控这个对象的地址、大小以及使用情况。通常，GC采用有向图的方式记录和管理堆(heap)中的所有对象。通过这种方式确定哪些对象是"可达的"，哪些对象是"不可达的"。当GC确定一些对象为"不可达"时，GC就有责任回收这些内存空间。可以。程序员可以手动执行System.gc()，通知GC运行，但是Java语言规范并不保证GC一定会执行。
-104、静态变量和实例变量的区别？
+
+</details>
+
+<b><details><summary>104、静态变量和实例变量的区别？</summary></b>
+
 static i = 10; //常量
    class A a;  a.i =10;//可变
-105、什么是java序列化，如何实现java序列化？
+
+</details>
+
+<b><details><summary>105、什么是java序列化，如何实现java序列化？</summary></b>
+
 序列化就是一种用来处理对象流的机制，所谓对象流也就是将对象的内容进行流化。可以对流化后的对象进行读写操作，也可将流化后的对象传输于网络之间。序列化是为了解决在对对象流进行读写操作时所引发的问题。
 序列化的实现：将需要被序列化的类实现Serializable接口，该接口没有需要实现的方法，implements Serializable只是为了标注该对象是可被序列化的，然后使用一个输出流(如：FileOutputStream)来构造一个ObjectOutputStream(对象流)对象，接着，使用ObjectOutputStream对象的writeObject(Object obj)方法就可以将参数为obj的对象写出(即保存其状态)，要恢复的话则用输入流。
-106、是否可以从一个static方法内部发出对非static方法的调用？
+
+</details>
+
+<b><details><summary>106、是否可以从一个static方法内部发出对非static方法的调用？</summary></b>
+
 不可以,如果其中包含对象的method()；不能保证对象初始化.
-107、写clone()方法时，通常都有一行代码，是什么？
+
+</details>
+
+<b><details><summary>107、写clone()方法时，通常都有一行代码，是什么？</summary></b>
+
 Clone 有缺省行为，super.clone();他负责产生正确大小的空间，并逐位复制。
-108、在JAVA中，如何跳出当前的多重嵌套循环？
+
+</details>
+
+<b><details><summary>108、在JAVA中，如何跳出当前的多重嵌套循环？</summary></b>
+
 用break; return 方法。
-109、List、Map、Set三个接口，存取元素时，各有什么特点？
+
+</details>
+
+<b><details><summary>109、List、Map、Set三个接口，存取元素时，各有什么特点？</summary></b>
+
 List 以特定次序来持有元素，可有重复元素。Set 无法拥有重复元素,内部排序。Map 保存key-value值，value可多值。
-110、J2EE是什么？
+
+</details>
+
+<b><details><summary>110、J2EE是什么？</summary></b>
+
 J2EE是Sun公司提出的多层(multi-diered),分布式(distributed),基于组件(component-base)的企业级应用模型(enterpriese application model).在这样的一个应用系统中，可按照功能划分为不同的组件，这些组件又可在不同计算机上，并且处于相应的层次(tier)中。所属层次包括客户层(clietn tier)组件,web层和组件,Business层和组件,企业信息系统(EIS)层。
-111、UML方面 
+
+</details>
+
+<b><details><summary>111、UML方面</summary></b>
+
 标准建模语言UML。用例图,静态图(包括类图、对象图和包图),行为图,交互图(顺序图,合作图),实现图。
-112、说出一些常用的类，包，接口，请各举5个
+
+</details>   
+
+<b><details><summary>112、说出一些常用的类，包，接口，请各举5个</summary></b>
+
 常用的类：BufferedReader  BufferedWriter  FileReader  FileWirter  String  Integer
 常用的包：java.lang  java.awt  java.io  java.util  java.sql
-常用的接口：Remote  List  Map  Document  NodeList 
-113、开发中都用到了那些设计模式?用在什么场合? 
+常用的接口：Remote  List  Map  Document  NodeList
+
+</details>
+
+<b><details><summary>113、开发中都用到了那些设计模式?用在什么场合?</summary></b>
+
 每个模式都描述了一个在我们的环境中不断出现的问题，然后描述了该问题的解决方案的核心。通过这种方式，你可以无数次地使用那些已有的解决方案，无需在重复相同的工作。主要用到了MVC的设计模式。用来开发JSP/Servlet或者J2EE的相关应用。简单工厂模式等。
-114、jsp有哪些动作?作用分别是什么? 
+
+</details>
+
+<b><details><summary>114、jsp有哪些动作?作用分别是什么?</summary></b>
+
 JSP共有以下6种基本动作 jsp:include：在页面被请求的时候引入一个文件。 jsp:useBean：寻找或者实例化一个JavaBean。 jsp:setProperty：设置JavaBean的属性。 jsp:getProperty：输出某个JavaBean的属性。 jsp:forward：把请求转到一个新的页面。 jsp:plugin：根据浏览器类型为Java插件生成OBJECT或EMBED标记。
-115、Anonymous Inner Class (匿名内部类) 是否可以extends(继承)其它类，是否可以implements(实现)interface(接口)? 
+
+</details>
+
+<b><details><summary>115、Anonymous Inner Class (匿名内部类) 是否可以extends(继承)其它类，是否可以implements(实现)interface(接口)?</summary></b>
+
 可以继承其他类或完成其他接口，在swing编程中常用此方式。
-116、应用服务器与WEB SERVER的区别？
+
+</details>
+
+<b><details><summary>116、应用服务器与WEB SERVER的区别？</summary></b>
+
 应用服务器：Weblogic、Tomcat、Jboss
 WEB SERVER：IIS、 Apache
-117、BS与CS的联系与区别。
+
+</details>
+
+<b><details><summary>117、BS与CS的联系与区别。</summary></b>
+
+```
 C/S是Client/Server的缩写。服务器通常采用高性能的PC、工作站或小型机，并采用大型数据库系统，如Oracle、Sybase、Informix或 SQL Server。客户端需要安装专用的客户端软件。
 B/Ｓ是Brower/Server的缩写，客户机上只要安装一个浏览器（Browser），如Netscape Navigator或Internet Explorer，服务器安装Oracle、Sybase、Informix或 SQL Server等数据库。在这种结构下，用户界面完全通过WWW浏览器实现，一部分事务逻辑在前端实现，但是主要事务逻辑在服务器端实现。浏览器通过Ｗeb Server 同数据库进行数据交互。
-C/S 与 B/S 区别： 
-１．硬件环境不同: 
+C/S 与 B/S 区别：
+１．硬件环境不同:
 　　C/S 一般建立在专用的网络上, 小范围里的网络环境, 局域网之间再通过专门服务器提供连接和数据交换服务.
-　　B/S 建立在广域网之上的, 不必是专门的网络硬件环境,例与电话上网, 租用设备. 信息自己管理. 有比C/S更强的适应范围, 一般只要有操作系统和浏览器就行 
-２．对安全要求不同 
+　　B/S 建立在广域网之上的, 不必是专门的网络硬件环境,例与电话上网, 租用设备. 信息自己管理. 有比C/S更强的适应范围, 一般只要有操作系统和浏览器就行
+２．对安全要求不同
 　　C/S 一般面向相对固定的用户群, 对信息安全的控制能力很强. 一般高度机密的信息系统采用C/S 结构适宜. 可以通过B/S发布部分可公开信息.
 　　B/S 建立在广域网之上, 对安全的控制能力相对弱, 可能面向不可知的用户。
-３．对程序架构不同 
+３．对程序架构不同
 　　C/S 程序可以更加注重流程, 可以对权限多层次校验, 对系统运行速度可以较少考虑.
-　　B/S 对安全以及访问速度的多重的考虑, 建立在需要更加优化的基础之上. 比C/S有更高的要求 B/S结构的程序架构是发展的趋势, 从MS的.Net系列的BizTalk 2000 Exchange 2000等, 全面支持网络的构件搭建的系统. SUN 和IBM推的JavaBean 构件技术等,使 B/S更加成熟. 
-４．软件重用不同 
+　　B/S 对安全以及访问速度的多重的考虑, 建立在需要更加优化的基础之上. 比C/S有更高的要求 B/S结构的程序架构是发展的趋势, 从MS的.Net系列的BizTalk 2000 Exchange 2000等, 全面支持网络的构件搭建的系统. SUN 和IBM推的JavaBean 构件技术等,使 B/S更加成熟.
+４．软件重用不同
 　　C/S 程序可以不可避免的整体性考虑, 构件的重用性不如在B/S要求下的构件的重用性好.
-　　B/S 对的多重结构,要求构件相对独立的功能. 能够相对较好的重用.就入买来的餐桌可以再利用,而不是做在墙上的石头桌子 
-５．系统维护不同  
+　　B/S 对的多重结构,要求构件相对独立的功能. 能够相对较好的重用.就入买来的餐桌可以再利用,而不是做在墙上的石头桌子
+５．系统维护不同 
 　　C/S 程序由于整体性, 必须整体考察, 处理出现的问题以及系统升级. 升级难. 可能是再做一个全新的系统
-　　B/S 构件组成,方面构件个别的更换,实现系统的无缝升级. 系统维护开销减到最小.用户从网上自己下载安装就可以实现升级. 
-６．处理问题不同 
+　　B/S 构件组成,方面构件个别的更换,实现系统的无缝升级. 系统维护开销减到最小.用户从网上自己下载安装就可以实现升级.
+６．处理问题不同
 　　C/S 程序可以处理用户面固定, 并且在相同区域, 安全要求高需求, 与操作系统相关. 应该都是相同的系统
-　　B/S 建立在广域网上, 面向不同的用户群, 分散地域, 这是C/S无法作到的. 与操作系统平台关系最小. 
-７．用户接口不同 
+　　B/S 建立在广域网上, 面向不同的用户群, 分散地域, 这是C/S无法作到的. 与操作系统平台关系最小.
+７．用户接口不同
 　　C/S 多是建立的Window平台上,表现方法有限,对程序员普遍要求较高
-　　B/S 建立在浏览器上, 有更加丰富和生动的表现方式与用户交流. 并且大部分难度减低,减低开发成本. 
-８．信息流不同 
+　　B/S 建立在浏览器上, 有更加丰富和生动的表现方式与用户交流. 并且大部分难度减低,减低开发成本.
+８．信息流不同
 　　C/S 程序一般是典型的中央集权的机械式处理, 交互性相对低
 　　B/S 信息流向可变化, B-B B-C B-G等信息、流向的变化, 更像交易中心。
-118、LINUX下线程，GDI类的解释。
-LINUX实现的就是基于核心轻量级进程的"一对一"线程模型，一个线程实体对应一个核心轻量级进程，而线程之间的管理在核外函数库中实现。 
+```
+</details>
+
+<b><details><summary>118、LINUX下线程，GDI类的解释。</summary></b>
+
+LINUX实现的就是基于核心轻量级进程的"一对一"线程模型，一个线程实体对应一个核心轻量级进程，而线程之间的管理在核外函数库中实现。
 GDI类为图像设备编程接口类库。
-119、STRUTS的应用(如STRUTS架构) 
-Struts是采用Java Servlet/JavaServer Pages技术，开发Web应用程序的开放源码的framework。 采用Struts能开发出基于MVC(Model-View-Controller)设计模式的应用构架。 Struts有如下的主要功能： 一.包含一个controller servlet，能将用户的请求发送到相应的Action对象。 二.JSP自由tag库，并且在controller servlet中提供关联支持，帮助开发员创建交互式表单应用。 三.提供了一系列实用对象：XML处理、通过Java reflection APIs自动处理JavaBeans属性、国际化的提示和消息。
-120、Jdo是什么? 
+
+</details>
+
+<b><details><summary>119、STRUTS的应用(如STRUTS架构)</summary></b>
+
+Struts是采用Java Servlet/JavaServer Pages技术，开发Web应用程序的开放源码的framework。 采用Struts能开发出基于MVC(Model-View-Controller)设计模式的应用构架。 Struts有如下的主要功能：
+
+一.包含一个controller servlet，能将用户的请求发送到相应的Action对象。
+
+二.JSP自由tag库，并且在controller servlet中提供关联支持，帮助开发员创建交互式表单应用。 三.提供了一系列实用对象：XML处理、通过Java reflection APIs自动处理JavaBeans属性、国际化的提示和消息。
+
+</details>
+
+<b><details><summary>120、Jdo是什么?</summary></b>
+
 JDO是Java对象持久化的新的规范，为java data object的简称,也是一个用于存取某种数据仓库中的对象的标准化API。JDO提供了透明的对象存储，因此对开发人员来说，存储数据对象完全不需要额外的代码（如JDBC API的使用）。这些繁琐的例行工作已经转移到JDO产品提供商身上，使开发人员解脱出来，从而集中时间和精力在业务逻辑上。另外，JDO很灵活，因为它可以在任何数据底层上运行。JDBC只是面向关系数据库（RDBMS）JDO更通用，提供到任何数据底层的存储功能，比如关系数据库、文件、XML以及对象数据库（ODBMS）等等，使得应用可移植性更强。
-121、内部类可以引用他包含类的成员吗？有没有什么限制？
+
+</details>
+
+<b><details><summary>121、内部类可以引用他包含类的成员吗？有没有什么限制？</summary></b>
+
 一个内部类对象可以访问创建它的外部类对象的内容
-122、WEB SERVICE名词解释。JSWDL开发包的介绍。JAXP、JAXM的解释。SOAP、UDDI,WSDL解释。 
+
+</details>
+
+<b><details><summary>122、WEB SERVICE名词解释。JSWDL开发包的介绍。JAXP、JAXM的解释。SOAP、UDDI,WSDL解释。</summary></b>
+
 Web ServiceWeb Service是基于网络的、分布式的模块化组件，它执行特定的任务，遵守具体的技术规范，这些规范使得Web Service能与其他兼容的组件进行互操作。
+
 JAXP(Java API for XML Parsing) 定义了在Java中使用DOM, SAX, XSLT的通用的接口。这样在你的程序中你只要使用这些通用的接口，当你需要改变具体的实现时候也不需要修改代码。
 JAXM(Java API for XML Messaging) 是为SOAP通信提供访问方法和传输机制的API。
+
 WSDL是一种 XML 格式，用于将网络服务描述为一组端点，这些端点对包含面向文档信息或面向过程信息的消息进行操作。这种格式首先对操作和消息进行抽象描述，然后将其绑定到具体的网络协议和消息格式上以定义端点。相关的具体端点即组合成为抽象端点（服务）。
-SOAP即简单对象访问协议(Simple Object Access Protocol)，它是用于交换XML编码信息的轻量级协议。 
+
+SOAP即简单对象访问协议(Simple Object Access Protocol)，它是用于交换XML编码信息的轻量级协议。
+
 UDDI 的目的是为电子商务建立标准；UDDI是一套基于Web的、分布式的、为Web Service提供的、信息注册中心的实现标准规范，同时也包含一组使企业能将自身提供的Web Service注册，以使别的企业能够发现的访问协议的实现标准。
+
+</details>
+
+<b><details><summary></summary></b>
+
+</details>
+
+<b><details><summary></summary></b>
+
+</details>
+
+<b><details><summary></summary></b>
+
+</details>
+
 
 JAVA代码查错
 1.
@@ -1022,7 +1098,7 @@ class Something {
     public void doSomething() {
         System.out.println("i = " + i);
     }
-} 
+}
 有什么错呢? 看不出来啊。
 答案: 正确。输出的是"i = 0"。int i属於instant variable (实例变量，或叫成员变量)。instant variable有default value。int的default value是0。
 7.
@@ -1049,7 +1125,7 @@ public class Something {
 9.
 此处，Something类的文件名叫OtherThing.java
 class Something {
-    private static void main(String[] something_to_do) {        
+    private static void main(String[] something_to_do) {       
         System.out.println("Do something ...");
     }
 }
@@ -1087,7 +1163,7 @@ class Ball implements Rollable {
         return name;
     }
     public Ball(String name) {
-        this.name = name;        
+        this.name = name;       
     }
    public void play() {
         ball = new Ball("Football");
@@ -1252,4 +1328,3 @@ public class SimpleMoneyFormat {
     StringBuffer cMoneyStringBuffer = new StringBuffer(moneyStr);
     int indexOfDot = cMoneyStringBuffer.indexOf(DOT);
     cMoneyStringBuffer.replace(indexOfDot, indexOfDot + 1, YUAN);
- 
